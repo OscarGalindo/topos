@@ -51,8 +51,8 @@ gulp.task('scripts', function () {
 gulp.task('css', function () {
     return gulp.src(paths.appCss)
         .pipe(plugins.sourcemaps.init())
-        .pipe(plugins.sass())
         .pipe(plugins.concat(final.appCss))
+        .pipe(plugins.sass())
         .pipe(plugins.autoprefixer({
             browsers: ['> 1%', 'last 2 versions'],
             cascade: false
