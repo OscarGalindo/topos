@@ -22,6 +22,7 @@ var paths = {
     }),
     appScripts: ['js/**/*.js'],
     appCss: ['scss/**/*.scss'],
+    globalScss: ['scss/global.scss'],
     build: './build'
 };
 
@@ -49,7 +50,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src(paths.appCss)
+    return gulp.src(paths.globalScss)
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.concat(final.appCss))
         .pipe(plugins.sass())
