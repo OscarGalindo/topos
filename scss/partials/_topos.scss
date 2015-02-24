@@ -37,7 +37,7 @@ html, body {
     height: 512px;
     width: 335px;
     border: 15px solid $borderGame;
-    background-image: url('/images/background.png');
+    background-image: $backgroundGameUrl;
     background-size: cover;
 
     .topo {
