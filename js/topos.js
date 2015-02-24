@@ -1,9 +1,15 @@
-(function () {
-    "use strict";
+$(document).ready(function () {
+    $('.topo').data('active', false);
 
-    $(document).ready(function () {
-        var LEVEL = 1;
-        var HITS = 0;
+    var $game = $('#juego'),
+        $hits = 0,
+        $topos = 0;
 
-    });
-})();
+    setInterval(function () {
+        if ($topos < 5) {
+            $game.trigger('nuevoTopo');
+            $topos++;
+        }
+    }, 1000)
+
+});
