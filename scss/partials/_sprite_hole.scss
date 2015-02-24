@@ -1,0 +1,14 @@
+@mixin cssSprite( $spriteVals ) {
+  width: nth( $spriteVals, 1 );
+  height: nth( $spriteVals, 2 );
+  background-repeat: no-repeat;
+  background-image: url(#{ nth( $spriteVals, 3 )} );
+  background-position: nth( $spriteVals, 4 ) nth( $spriteVals, 5 );
+  vertical-align: bottom;
+}
+$position-6: 167px 41px $image-hole -378px -134px;
+$position-4: 167px 89px $image-hole -181px -110px;
+$position-3: 135px 76px $image-hole 0px -116px;
+$position-2: 95px 59px $image-hole -414px -6px;
+$position-5: 167px 70px $image-hole -181px 0px;
+$position-1: 63px 35px $image-hole -36px -18px;
