@@ -34,8 +34,8 @@ html, body {
 
   #juego {
     margin: 0 auto;
-    height: 512px;
-    width: 335px;
+    height: 600px;
+    width: 450px;
     border: 15px solid $borderGame;
     background-image: $backgroundGameUrl;
     background-size: cover;
@@ -48,7 +48,7 @@ html, body {
       background-image: $holesUrl;
       background-size: 70px;
       background-repeat: no-repeat;
-      background-position: 15px;
+      background-position: 33px;
     }
   }
 }

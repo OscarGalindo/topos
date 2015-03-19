@@ -1,18 +1,21 @@
-$(document).ready(function () {
-    $('.topo').data('active', false);
+var doc = $(document);
 
+doc.ready(function () {
     var $game = $('#juego'),
         $topo = $('.topo'),
-        $hits = 0,
-        $topos = 0;
+        $hits = 0;
+    doc.topos = 0;
+
+    $topo.data('active', false);
 
     setInterval(function () {
-        if ($topos < 5) {
-            var randomDiv = parseInt(Math.random() * $topo.length);
-            if(false === $topo.eq(randomDiv).data('active')) {
-                $game.trigger('nuevoTopo');
-                $topo.eq(randomDiv).data('active', true);
-                $topos++;
+        if (doc.topos < 5) {
+            var randomDiv = parseInt(Math.random() * $topo.length),
+                divRandom = $topo.eq(randomDiv);
+
+            if(false === divRandom.data('active')) {
+                $game.trigger('nuevoTopo', {div: divRandom});
+                doc.topos++;
             }
         }
     }, 1000)
