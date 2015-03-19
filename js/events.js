@@ -1,5 +1,6 @@
 var doc = $(document),
-    juego = $('#juego');
+    juego = $('#juego'),
+    topo = $('.topo');
 
 juego.on('nuevoTopo', function (e, data) {
     var divTopoNuevo = data.div,
@@ -21,5 +22,19 @@ juego.on('finTopo', function(e, data) {
     divFinTopo.css('background-image', 'url(images/hole.png)');
     divFinTopo.data('active', false);
     doc.topos -= 1;
+});
+
+topo.on('click', function() {
+    var divTopo = $(this);
+
+    if(true === divTopo.data('active')) {
+        doc.hits++;
+        $('#capturados').html(doc.hits);
+        divTopo.data('active', false);
+        divTopo.css('background-image', 'url(images/captured.png)');
+        setTimeout(function() {
+            divTopo.css('background-image', 'url(images/hole.png)');
+        }, 1000);
+    }
 });
 

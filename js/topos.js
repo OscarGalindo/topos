@@ -2,8 +2,8 @@ var doc = $(document);
 
 doc.ready(function () {
     var $game = $('#juego'),
-        $topo = $('.topo'),
-        $hits = 0;
+        $topo = $('.topo');
+    doc.hits = 0;
     doc.topos = 0;
 
     $topo.data('active', false);
