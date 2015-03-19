@@ -45,7 +45,10 @@ html, body {
       height: calc((100% - 150px) / 4);
       border: 1px solid $black;
       float: left;
-      background: $holesUrl -5px -20px;
+      background-image: $holesUrl;
+      background-size: 70px;
+      background-repeat: no-repeat;
+      background-position: 15px;
     }
   }
 }
