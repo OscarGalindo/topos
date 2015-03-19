@@ -1,6 +1,7 @@
-var doc = $(document);
+var doc = $(document),
+    juego = $('#juego');
 
-doc.on('nuevoTopo', function (e, data) {
+juego.on('nuevoTopo', function (e, data) {
     var divTopoNuevo = data.div,
         topo = 1;
 
@@ -15,7 +16,7 @@ doc.on('nuevoTopo', function (e, data) {
     }, 200);
 });
 
-$('#juego').on('finTopo', function(e, data) {
+juego.on('finTopo', function(e, data) {
     var divFinTopo = data.div;
     divFinTopo.css('background-image', 'url(images/hole.png)');
     divFinTopo.data('active', false);
